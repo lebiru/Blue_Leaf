@@ -1,0 +1,61 @@
+<!--header-->
+<html>
+<head>
+<title>Blue Leaf Bookstore</title>
+<link rel="stylesheet" type="text/css" href="home.css"/>
+
+<p>Success Database Connect... 127.0.0.1 via TCP/IP</p><hr />
+<BODY bgcolor="#033">
+</head>
+
+<body color="3FF">
+<div id="container">
+<div id="header">
+<a href="home.php"><img src="blue_leaf.png" width="100" height="75" style="float: right;"></a>
+<h1>Blue Leaf</h1>
+
+Welcome! Click the account icon to log in or register.<br />Today is Thursday, May 23, 2013<br /><br /> 
+
+</div>
+<div id="navigation">
+<ul>
+<li><a href="home.php">Home</a></li>
+<li><a href="about.php">About</a></li>
+<li><a href="checkout1.php"><img src="shopping_cart.png" width="20" height="20" style="float: right;"></a></li>
+<li><a href="account.php"><img src="account.png" width="23" height="20" style="float: right;"></a></li>
+</ul>
+</div>
+
+</body>
+<html>
+<div id="loginbox">
+
+	<form action="account_login.php" method="post">
+    <fieldset><legend>MEMBER LOGIN</legend>
+    
+    <div class="lside">Username: </div>
+    <div class ="rside"><input name="uname" type="text" size="15" /></div>
+    
+    <div class="lside">Password: </div>
+    <div class="rside"><input name="upwd" type="password" size="15" />
+    
+    <p><input type="submit" value="Log In" /></p>
+    <a href="account_forgot.php">Forgot password?</a>
+    
+    </fieldset>
+    </form>
+    
+    <div style="text-align:right;">
+    <a href="account_register.php">New Member? Register here</a></div>
+    
+</div>
+
+<br /><br />
+<hr />
+<div id="footer">
+<a href="about.php">About Blue Leaf</a>
+<br />
+Copyright &copy; Blue Leaf, 2011
+</div> <!--footer-->
+</body>
+</html>

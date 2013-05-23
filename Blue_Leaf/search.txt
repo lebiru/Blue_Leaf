@@ -1,0 +1,20 @@
+// The SQL string for searching, where $search is the query:
+
+SELECT DISTINCT bookdescriptions.isbn, title, description, price
+
+
+FROM bookauthors, bookauthorsbooks, bookdescriptions,
+bookcategoriesbooks, bookcategories
+
+
+WHERE bookauthors.AuthorID = bookauthorsbooks.AuthorID
+AND bookauthorsbooks.ISBN = bookdescriptions.ISBN
+AND bookdescriptions.ISBN = bookcategoriesbooks.ISBN
+AND bookcategories.CategoryID = bookcategoriesbooks.CategoryID
+AND (CategoryName = '$search'
+OR title LIKE '$search%'
+OR description LIKE '%$search%'
+OR publisher LIKE '%$search%'
+OR concat_ws(' ', strFName, strLName, strFName) LIKE '%$search%')
+
+ORDER BY title
